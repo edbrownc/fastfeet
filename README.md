@@ -49,6 +49,7 @@ yarn start
 
 # Mobile
 ```
+cd mobile
 yarn
 yarn android
 ```
