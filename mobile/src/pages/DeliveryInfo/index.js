@@ -118,7 +118,7 @@ export default function DeliverInfo({navigation, route}) {
             <ActionButtonText>View Issues</ActionButtonText>
           </ActionButton>
           <ActionButton
-            disabled={delivery.end_date}
+            disabled={!delivery.start_date || delivery.end_date}
             onPress={() =>
               navigation.navigate('ConfirmDelivery', {id: delivery.id})
             }

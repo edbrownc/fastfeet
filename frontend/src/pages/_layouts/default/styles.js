@@ -62,22 +62,24 @@ export const StyledTable = styled.table`
 `;
 
 export const Pagination = styled.div`
-  padding-top: 15px;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
+  width: 80%;
+  margin-bottom: 10px;
+`;
 
-  button {
-    transition: opacity 0.25s ease-out;
-    border-radius: 4px;
-    outline: 0;
-    border: 0;
-    padding: 8px;
-    margin: 0 10px 0 10px;
-    &:disabled {
-      opacity: 0.35;
-      cursor: not-allowed;
-    }
+export const NavButton = styled.button`
+  transition: opacity 0.25s ease-out;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  padding: 8px;
+  margin-left: 5px;
+  background: #7d40e7;
+  color: #fff;
+  &:disabled {
+    background: #ccc;
   }
 `;
 

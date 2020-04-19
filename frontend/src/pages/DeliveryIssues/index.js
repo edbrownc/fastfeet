@@ -9,6 +9,7 @@ import {
   PurpleViewIcon,
   RedDeleteIcon,
   Pagination,
+  NavButton,
 } from '~/pages/_layouts/default/styles';
 import api from '~/services/api';
 import ViewIssue from './ViewIssue';
@@ -144,21 +145,20 @@ export default function DeliveryIssues() {
       </StyledTable>
 
       <Pagination>
-        <button
+        <NavButton
           type="button"
           disabled={page < 2}
           onClick={() => handlePagination('prev')}
         >
-          Prev
-        </button>
-        <span>Page {page}</span>
-        <button
+          {'<'}
+        </NavButton>
+        <NavButton
           type="button"
           onClick={() => handlePagination('next')}
           disabled={issues.length < 20}
         >
-          Next
-        </button>
+          {'>'}
+        </NavButton>
       </Pagination>
       {viewIssue ? (
         <ViewIssue

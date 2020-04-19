@@ -11,6 +11,7 @@ import {
   BlueEditIcon,
   RedDeleteIcon,
   Pagination,
+  NavButton,
 } from '~/pages/_layouts/default/styles';
 import api from '~/services/api';
 
@@ -199,21 +200,20 @@ export default function Recipients() {
       </StyledTable>
 
       <Pagination>
-        <button
+        <NavButton
           type="button"
           disabled={page < 2}
           onClick={() => handlePagination('prev')}
         >
-          Prev
-        </button>
-        <span>Page {page}</span>
-        <button
+          {'<'}
+        </NavButton>
+        <NavButton
           type="button"
           onClick={() => handlePagination('next')}
           disabled={recipients.length < 20}
         >
-          Next
-        </button>
+          {'>'}
+        </NavButton>
       </Pagination>
     </>
   );
