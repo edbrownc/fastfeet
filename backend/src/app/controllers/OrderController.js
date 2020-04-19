@@ -7,6 +7,7 @@ import File from '../models/File';
 import NewOrderMail from '../jobs/NewOrderMail';
 import Queue from '../../lib/Queue';
 import isWithinBusinessHours from '../utils/WithinBusinessHours';
+import CancellationMail from '../jobs/CancellationMail';
 
 class OrderController {
   async index(req, res) {
@@ -159,6 +160,11 @@ class OrderController {
     order.canceled_at = new Date();
 
     await order.save();
+
+    await Queue.add(CancellationMail.key, {
+      order,
+      description: 'Too many attempts to deliver',
+    });
 
     return res.json(order);
   }

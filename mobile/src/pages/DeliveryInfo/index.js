@@ -31,26 +31,24 @@ export default function DeliverInfo({navigation, route}) {
   }
 
   async function handlePickupDelivery() {
-    try {
-      await api.put(`/couriers/${courierId}/activeorders/${delivery.id}`, {
+    await api
+      .put(`/couriers/${courierId}/activeorders/${delivery.id}`, {
         start_date: new Date(),
-      });
+      })
+      .then(() => {
+        navigation.reset({
+          index: 0,
+          routes: [{name: 'Deliveries'}],
+        });
 
-      navigation.reset({
-        index: 0,
-        routes: [{name: 'Deliveries'}],
+        Alert.alert(
+          'Delivery picked up',
+          'The delivery was successfully updated!'
+        );
+      })
+      .catch(error => {
+        Alert.alert('Error picking up delivery', error.response.data.error);
       });
-
-      Alert.alert(
-        'Delivery picked up',
-        'The delivery was successfully updated!'
-      );
-    } catch (error) {
-      Alert.alert(
-        'Error picking up delivery',
-        'There was an error picking up your delivery, try again later.'
-      );
-    }
   }
 
   return (

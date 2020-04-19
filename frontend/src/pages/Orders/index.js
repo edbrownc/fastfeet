@@ -146,7 +146,7 @@ export default function Orders() {
   return (
     <>
       <header>
-        <strong>Order management</strong>
+        <strong>Orders management</strong>
       </header>
 
       <SelectContainer>

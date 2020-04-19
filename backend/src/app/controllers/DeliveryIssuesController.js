@@ -4,6 +4,8 @@ import DeliveryIssue from '../models/DeliveryIssue';
 import Order from '../models/Order';
 import CancellationMail from '../jobs/CancellationMail';
 import Queue from '../../lib/Queue';
+import Courier from '../models/Courier';
+import Recipient from '../models/Recipient';
 
 class DeliveryIssuesController {
   async index(req, res) {
@@ -54,7 +56,29 @@ class DeliveryIssuesController {
   }
 
   async delete(req, res) {
-    const order = await Order.findByPk(req.params.id);
+    const order = await Order.findByPk(req.params.id, {
+      include: [
+        {
+          model: Courier,
+          as: 'courier',
+          attributes: ['id', 'name', 'email'],
+        },
+        {
+          model: Recipient,
+          as: 'recipient',
+          attributes: [
+            'id',
+            'name',
+            'street',
+            'number',
+            'complement',
+            'state',
+            'city',
+            'zip',
+          ],
+        },
+      ],
+    });
 
     order.canceled_at = new Date();
 
