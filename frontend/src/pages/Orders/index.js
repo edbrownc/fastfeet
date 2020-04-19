@@ -35,8 +35,6 @@ export default function Orders() {
     async function loadOrders() {
       const res = await api.get('/orders');
 
-      console.tron.log(res);
-
       setOrders(res.data);
     }
 
@@ -96,13 +94,20 @@ export default function Orders() {
   async function handleDeleteOrder() {
     setAnchorActions(null);
 
-    const res = window.confirm('Are you sure you want to delete this order?');
+    const isDelete = window.confirm(
+      'Are you sure you want to delete this order?'
+    );
 
-    if (res === true) {
-      await api.delete(`/orders/${selectedOrder.id}`);
+    if (isDelete) {
+      const res = await api.delete(`/orders/${selectedOrder.id}`);
 
-      const orderDeletedArray = orders.filter(order => order !== selectedOrder);
-      setOrders(orderDeletedArray);
+      const canceledOrder = res.data;
+
+      const updatedOrders = orders.map(order =>
+        order.id === canceledOrder.id ? canceledOrder : order
+      );
+
+      setOrders(updatedOrders);
     }
   }
 

@@ -135,6 +135,14 @@ class OrderController {
 
   async delete(req, res) {
     const order = await Order.findByPk(req.params.id, {
+      attributes: [
+        'id',
+        'product',
+        'start_date',
+        'end_date',
+        'canceled_at',
+        'status',
+      ],
       include: [
         {
           model: Recipient,
