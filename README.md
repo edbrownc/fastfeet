@@ -10,6 +10,7 @@
 This full stack application project was developed at [RocketSeat GoStack Bootcamp](https://rocketseat.com.br/bootcamp) using ReactJS, NodeJS and React Native.
 
 ## :rocket: Features
+# Backend
 - **[Express](https://expressjs.com/en/starter/installing.html)** — JavaScript back-end Framework
 - **[Axios](https://github.com/axios/axios)** — API requests
 - **[JWT](https://github.com/auth0/node-jsonwebtoken)** - JSON Web Token for authentication
@@ -27,6 +28,16 @@ This full stack application project was developed at [RocketSeat GoStack Bootcam
 - **[Sentry](https://docs.sentry.io/)** - Error monitoring and reporting
 - **[yup](https://github.com/jquense/yup)** - Value parsing and validation for requests
 - **[date-fns](https://date-fns.org/)** - Date formatting
+
+# Frontend
+- **[React](https://reactjs.org/)** — A JavaScript library for building user interfaces
+- **[Redux](https://redux.js.org/)** -State management (includes Saga and Persist)
+- **[Immer](https://immerjs.github.io/immer/docs/introduction)** - Allows to work with immutable states using drafts 
+- **[Axios](https://github.com/axios/axios)** — API requests
+- **[yup](https://github.com/jquense/yup)** - Value parsing and validation for requests
+- **[date-fns](https://date-fns.org/)** - Date formatting
+- **[ESLint](https://eslint.org/)** - ESlint/Prettier/Editor Config using Airbnb style guide
+- **[Reactotron](https://github.com/infinitered/reactotron)** - Application to inspect React applications
 
 # Pre-requisites
 
