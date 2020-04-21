@@ -36,6 +36,15 @@ This full stack application project was developed at [RocketSeat GoStack Bootcam
 - **[ESLint](https://eslint.org/)** - ESlint/Prettier/Editor Config using Airbnb style guide
 - **[Reactotron](https://github.com/infinitered/reactotron)** - Application to inspect React applications
 
+# Mobile
+- **[React](https://reactjs.org/)** — A JavaScript library for building user interfaces
+- **[Redux](https://redux.js.org/)** -State management (includes Saga and Persist)
+- **[Axios](https://github.com/axios/axios)** — API requests
+- **[date-fns](https://date-fns.org/)** - Date formatting
+- **[ESLint](https://eslint.org/)** - ESlint/Prettier/Editor Config using Airbnb style guide
+- **[Reactotron](https://github.com/infinitered/reactotron)** - Application to inspect React applications
+- **[react-native-camera](https://github.com/react-native-community/react-native-camera)** - Use phones camera
+
 # Pre-requisites
 
 - **Node** and **Yarn** installed;
