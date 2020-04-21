@@ -49,7 +49,7 @@ This full stack application project was developed at [RocketSeat GoStack Bootcam
 
 - **Node** and **Yarn** installed;
 - **Redis** and **PostgreSQL** instances running (Docker containers were used during development);
-- **Android** emulator or device hooked up to your machine.
+- **Android** emulator set up or device hooked up to your machine.
 
 ## ⚡️ Getting started
 
@@ -86,5 +86,6 @@ yarn start
 ```
 cd mobile
 yarn
-yarn android
+yarn start
+react-native run-android
 ```
