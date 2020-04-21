@@ -43,7 +43,7 @@ This full stack application project was developed at [RocketSeat GoStack Bootcam
 - **[date-fns](https://date-fns.org/)** - Date formatting
 - **[ESLint](https://eslint.org/)** - ESlint/Prettier/Editor Config using Airbnb style guide
 - **[Reactotron](https://github.com/infinitered/reactotron)** - Application to inspect React applications
-- **[react-native-camera](https://github.com/react-native-community/react-native-camera)** - Use phones camera
+- **[react-native-camera](https://github.com/react-native-community/react-native-camera)** - Use phone's camera
 
 # Pre-requisites
 
